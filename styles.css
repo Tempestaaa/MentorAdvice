@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --clr-text: hsl(193, 38%, 86%);
+  --clr-sub: hsl(150, 100%, 66%);
+  --clr-GrayishBlue: hsl(217, 19%, 38%);
+  --clr-advice-wrapper: hsl(217, 19%, 24%);
+  --clr-background: hsl(218, 23%, 16%);
+
+  --fs-default: 28px;
+
+  --ff-default: "Manrope", sans-serif;
+  --fw-black: 800;
+}
+
+main {
+  height: 100svh;
+  background: var(--clr-background);
+  color: var(--clr-text);
+  display: grid;
+  place-items: center;
+  font-family: var(--ff-default);
+  font-size: var(--fs-default);
+}
+
+.advice {
+  width: 33%;
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
+  background-color: var(--clr-advice-wrapper);
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  position: relative;
+}
+
+.advice__title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--clr-sub);
+}
+
+.advice__paragraph {
+  font-weight: var(--fw-black);
+  text-align: center;
+}
+
+picture {
+  margin: 1rem 0;
+}
+
+.advice__btn {
+  position: absolute;
+  border-radius: 50%;
+  border: 0;
+  outline: 0;
+  background: var(--clr-sub);
+  cursor: pointer;
+  padding: 1rem;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.advice__btn:hover {
+  box-shadow: 0 0 25px 4px var(--clr-sub);
+}
+
+@media (max-width: 600px) {
+  .advice {
+    width: 90%;
+  }
+}
